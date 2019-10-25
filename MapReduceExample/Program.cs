@@ -6,7 +6,7 @@ namespace MapReduceExample
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MapReduce mr = new MapReduce();
         }
     }
 }
