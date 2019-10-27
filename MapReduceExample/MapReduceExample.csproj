@@ -6,7 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Input.txt">
+    <None Remove="Input.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Small.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
