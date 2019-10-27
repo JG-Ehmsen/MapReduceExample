@@ -62,8 +62,8 @@ namespace MapReduceExample
         {
             var dict = new ConcurrentDictionary<string, int>();
             Parallel.ForEach(
-                File.ReadLines(file), 
-                new ParallelOptions { }, 
+                File.ReadLines(file),
+                new ParallelOptions { },
                 () => new ConcurrentDictionary<string, int>(),
                 (line, state, lineNumber, tempDict) =>
             {
@@ -74,11 +74,11 @@ namespace MapReduceExample
                 {
                     foreach (var item in tempDict)
                     {
-                            if (dict.ContainsKey(item.Key))
+                        if (dict.ContainsKey(item.Key))
                         {
                             dict[item.Key] += item.Value;
                         }
-                            else
+                        else
                         {
                             dict[item.Key] = item.Value;
                         }
